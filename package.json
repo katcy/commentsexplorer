@@ -1,0 +1,69 @@
+{
+  "name": "commentsexplorer",
+  "displayName": "Comments Explorer",
+  "description": "An easier way to search for the keys in your current workspace",
+  "version": "0.0.5",
+  "author": {
+    "name": "katcy",
+    "email": "karthikchinnasamy9494@gmail.com"
+  },
+  "publisher": "Karthik Chinnasamy",
+  "engines": {
+    "vscode": "^1.79.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./src/index.js",
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "comments-explorer",
+          "title": "Comments Explorer",
+          "icon": "media/icons8-broom-50.png"
+        }
+      ]
+    },
+    "views": {
+      "comments-explorer": [
+        {
+          "id": "commentsExplorerTree",
+          "name": "Comments Explorer"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "Cleanup Settings",
+      "properties": {
+        "commentsexplorer.premierCleanupItems": {
+          "type": "array",
+          "default": null,
+          "description": "DBIQP Cleanup keys"
+        },
+        "commentsexplorer.exclude": {
+          "type": "string",
+          "default": "node_modules,.vscode",
+          "description": "Folder/Files to exclude from search"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "node ./test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.79.0",
+    "@types/glob": "^8.1.0",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "20.2.5",
+    "eslint": "^8.41.0",
+    "glob": "^8.1.0",
+    "mocha": "^10.2.0",
+    "typescript": "^5.1.3",
+    "@vscode/test-electron": "^2.3.2"
+  }
+}
