@@ -8,12 +8,12 @@ This extension allows the developers to quickly search the repo for the cleanup 
 
 ## Extension Settings
 
-In the `.vscode/settings.json` file, add the cleanup keys to `cleanup.btiqpcleanupkeys` property
+In the `.vscode/settings.json` file, add the cleanup keys to `commentsexplorer.premierCleanupItems` property
 
 ##### For example:
 
 ```javascript
-"cleanup.premierCleanupItems": [
+"commentsexplorer.premierCleanupItems": [
     {
       "label": "CB-xxxxx: Convert inline style to styles.js file",
       "cleanupKeys": [
